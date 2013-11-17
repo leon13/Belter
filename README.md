@@ -1,10 +1,9 @@
-
 # Belter
 > An exceptional or outstanding example of something.
 
 __Harry Harrison's Belter, A full suite framework to help you hit the ground running.__
 
-This boilplate isn't really meant for general use, but more for those who know what they're doing. Or at least like to think they do... _I'm talking about you, Phil_.
+This boilerplate isn't really meant for general use, but more for those who know what they're doing. Or at least like to think they do... _I'm talking about you, Phil_.
 
 ## Features
 Aside from the obvious starting point that can always take so damn long, Belter includes a few little neat tricks I've picked up along the way.
