@@ -22,7 +22,7 @@ The web is becoming incredibly saturated with hundereds of CSS Frameworks that c
 Well, Belter aims to give you a starting point for your sites but also to help keep your workflow on track. For many this'll mean revamping your workflow, but I'm reletively confident this'll be a good thing once you really get into using Belter. There's an extra advantage here in that it's completely OS independent, so working in mixed-OS teams is no longer an issue.
 
 ## Installation
-I promise i'll write these up soon.
+_I promise i'll write these up soon._
 
 ## Editions
 I'm going to do my best to compile the Belter Framework into the following systems. Each of these will be seperate, and linked from here when they're available. If you have any suggestions, please get in touch.
@@ -45,7 +45,7 @@ Each edition of Belter has it's own requirments (Obviously), so you'll need to c
 - SASS installed through Ruby.
 
 ## License
-The Stalactite Framework is obviously not for everyone, but the license is the MIT standard as follows...
+The Belter Framework is obviously not for everyone, but the license is the MIT standard as follows...
 
     Copyright (c) 2013 Harry Harrison
 
