@@ -1,0 +1,35 @@
+$black: #111;
+$white: #FFF;
+$grey: #969896;
+$main: #C02942;
+
+$red: #D54E53;
+$green: #B9CA4A;
+$blue: #7AA6DA;
+
+::selection {
+	background: transparentize($white, 0.1);
+	color: $black;
+	text-shadow: none;
+}
+
+html, body, *, input, textarea {
+	-webkit-font-smoothing: antialiased;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	// background-color: $white;
+	color: $black;
+	font-family: "Lato" , Arial;
+}
+
+@import "extras/bourbon/bourbon"; // http://bourbon.io/docs/
+@import "extras/neat/neat"; // http://neat.bourbon.io/docs/
+@import "extras/font-awesome/font-awesome"; // http://fontawesome.io
+@import "extras/extras";
+
+@import "global", "typography", "grid";
+@import "pages/home";
+
+// @import "responsive/responsive";

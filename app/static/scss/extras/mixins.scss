@@ -1,0 +1,106 @@
+// This adds a smooth transition to links
+// @include anim(0.1s, color);
+@mixin anim($speed: 0.1s, $how: linear, $what: all) {
+	-webkit-transition: $speed $how $what;
+	-moz-transition: $speed $how $what;
+	transition: $speed $how $what;
+}
+
+@mixin prep(){
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-origin: center center 50%;
+	-moz-transform-origin: center center 50%;
+	-ms-transform-origin: center center 50%;
+	-o-transform-origin: center center 50%;
+	transform-origin: center center 50%;
+}
+
+// Strips border radiuses, box shadows, text shadows and borders
+// To be used before other attributes on a element
+// @include nofrills;
+@mixin nofrills {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-image: none;
+	text-shadow: none;
+	border:none;
+}
+
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+// Simple clearfix
+// @include clear;
+@mixin clear() {
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Hides the text within the element
+// @include hide-text;
+@mixin hide-text{
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+// Cross browser opacity
+// @include opacity(0.5);
+@mixin opacity($value: 0.5) {
+	opacity: $value;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="$value * 100")";
+	filter: alpha(opacity= $value * 100 );
+	zoom: 1;
+}
+
+// Rounded corners, yup.
+// @include border-radius(5px);
+@mixin border-radius($amount: 3px){
+	-webkit-border-radius: $amount;
+	-moz-border-radius: $amount;
+	border-radius: $amount;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+@mixin box-sizing(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin icon(){
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-transform: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-family: 'icons';
+}

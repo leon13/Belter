@@ -1,0 +1,46 @@
+/**
+ * Doorslam - Throws a warning to browsers lower than IE9 and without javascript.
+ * ================================================================================
+ * @scope global
+ */
+.doorslam {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000000;
+    width: 100%;
+    height: 50px;
+    background-color: #34495E;
+    &#javascript {
+        border-bottom: 2px solid #7F8C8D;
+    }
+    &#internetExplorer {
+        display: none;
+    }
+    p {
+        font-size: 16px;
+        padding: 0px;
+        margin: 0px;
+        color: #ECF0F1;
+        text-align: center;
+        line-height: 50px;
+        a {
+            color: #ECF0F1;
+            border-bottom: 1px solid #ECF0F1;
+            font-weight: bold;
+            &:hover {
+                text-decoration: none;
+                color: #2ECC71;
+                border-bottom: 1px solid #2ECC71;
+            }
+        }
+    }
+}
+
+html.lt-ie9 {
+    .doorslam {
+        &#internetExplorer {
+            display: block;
+        }
+    }
+}

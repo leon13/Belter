@@ -1,0 +1,18 @@
+{
+    "name": "Belter",
+    "version": "0.0.4",
+    "author": "Harry Harrison",
+    "private": true,
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-notify": "*",
+        "grunt-contrib-sass": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-coffee": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-modernizr": "*",
+        "matchdep": "*"
+    }
+}
